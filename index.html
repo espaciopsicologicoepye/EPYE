@@ -7,21 +7,21 @@
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="logo.png">
 
-  <!-- SEO Local y Título Principal -->
-  <title>EPYE | Espacio Psicológico y Educativo - Lic. Natalia Antúnez Kvedaras</title>
-  <meta name="description" content="Atención psicológica y psicoterapia en Montevideo (8 de Octubre y Pan de Azúcar). Tratamiento para la ansiedad, psicodiagnóstico, terapia individual y de pareja. Lic. Natalia Antúnez (UDELAR).">
-  <meta name="keywords" content="Psicóloga Montevideo, EPYE, Natalia Antúnez Kvedaras, tratamiento ansiedad Uruguay, psicoterapia La Blanqueada Union, psicodiagnostico, terapia de pareja">
+  <!-- SEO Local enfocado en La Unión, Villa Española y zonas de influencia -->
+  <title>Psicóloga en La Unión y Zonas Cercanas | EPYE - Lic. Natalia Antúnez</title>
+  <meta name="description" content="Consultorio psicológico en La Unión (8 de Octubre y Pan de Azúcar). Zona de cercanía con Villa Española, Curva de Maroñas y La Blanqueada. Atención presencial y online. Lic. Natalia Antúnez (UDELAR).">
+  <meta name="keywords" content="psicologo union, psicologa union, psicologo villa española, psicologa villa española, psicologa curva de maroñas, psicologo maroñas, psicologo la blanqueada, atencion psicologica 8 de octubre, EPYE montevideo">
   <meta name="author" content="Lic. Natalia Antúnez Kvedaras">
   <meta name="robots" content="index, follow">
 
   <!-- ETIQUETAS OPEN GRAPH -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="EPYE | Espacio Psicológico y Educativo - Lic. Natalia Antúnez">
-  <meta property="og:description" content="Psicoterapia, tratamiento para la ansiedad y acompañamiento emocional en Montevideo. Consulta presencial y online.">
+  <meta property="og:title" content="Psicóloga en La Unión y Zonas Cercanas | EPYE - Lic. Natalia Antúnez">
+  <meta property="og:description" content="Consultorio en 8 de Octubre y Pan de Azúcar. Tratamiento para la ansiedad, psicoterapia individual, familiar y de pareja en Montevideo y online.">
   <meta property="og:url" content="https://espaciopsicologicoepye.github.io/EPYE/">
   <meta property="og:image" content="https://espaciopsicologicoepye.github.io/EPYE/logo.png">
 
-  <!-- DATOS ESTRUCTURADOS SCHEMA.ORG -->
+  <!-- DATOS ESTRUCTURADOS SCHEMA.ORG LOCAL -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -45,10 +45,19 @@
       "longitude": -56.1368
     },
     "hasMap": "https://maps.app.goo.gl/WWuK4uQhxDuugxF89",
+    "areaServed": [
+      { "@type": "AdministrativeArea", "name": "La Unión" },
+      { "@type": "AdministrativeArea", "name": "Villa Española" },
+      { "@type": "AdministrativeArea", "name": "Curva de Maroñas" },
+      { "@type": "AdministrativeArea", "name": "La Blanqueada" },
+      { "@type": "AdministrativeArea", "name": "Maroñas" },
+      { "@type": "AdministrativeArea", "name": "Malvín Norte" },
+      { "@type": "City", "name": "Montevideo" }
+    ],
     "founder": {
       "@type": "Person",
       "name": "Lic. Natalia Antúnez Kvedaras",
-      "jobTitle": "Licenciada en Psicología y Pedagogía",
+      "jobTitle": "Licenciada en Psicología (UDELAR)",
       "alumniOf": "Universidad de la República (UDELAR)"
     },
     "medicalSpecialty": [
@@ -108,7 +117,7 @@
       margin-left: 6px;
     }
 
-    /* HEADER & NAV */
+    /* HEADER & NAV ANTI-DESBORDE (Siempre prolijo en una sola línea) */
     header {
       background: var(--surface);
       border-bottom: 1px solid var(--border-color);
@@ -122,45 +131,52 @@
       justify-content: space-between;
       align-items: center;
       height: 75px;
+      flex-wrap: nowrap; /* Impide partirse en dos renglones */
+      gap: 15px;
     }
 
     .brand-logo {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 10px;
       text-decoration: none;
+      flex-shrink: 0; /* Evita que el logo se aplaste */
     }
 
     .brand-logo img {
-      height: 50px;
+      height: 48px;
       width: auto;
       object-fit: contain;
       display: block;
     }
 
     .brand-logo .brand-subtitle {
-      font-size: 0.78rem;
+      font-size: 0.74rem;
       text-transform: uppercase;
-      letter-spacing: 1.2px;
+      letter-spacing: 1px;
       color: var(--accent);
       font-weight: 700;
       display: block;
       border-left: 1.5px solid var(--border-color);
-      padding-left: 12px;
+      padding-left: 10px;
       white-space: nowrap;
     }
 
     .nav-links {
       display: flex;
       list-style: none;
-      gap: 25px;
+      gap: 18px; /* Espaciado balanceado */
+      align-items: center;
+      flex-shrink: 1;
+      margin: 0 10px;
     }
 
     .nav-links a {
       text-decoration: none;
       color: var(--text-dark);
       font-weight: 500;
-      font-size: 0.95rem;
+      font-size: 0.90rem;
+      white-space: nowrap; /* Cada enlace se mantiene en su propio texto */
       transition: color 0.2s;
     }
 
@@ -168,15 +184,20 @@
       color: var(--accent);
     }
 
+    .nav-cta {
+      flex-shrink: 0;
+    }
+
     .btn {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      padding: 12px 24px;
+      padding: 10px 20px;
       border-radius: 30px;
       text-decoration: none;
       font-weight: 600;
-      font-size: 0.95rem;
+      font-size: 0.90rem;
+      white-space: nowrap;
       transition: all 0.2s ease;
       cursor: pointer;
       border: none;
@@ -222,9 +243,9 @@
       margin-bottom: 15px;
     }
 
-    .hero h2 {
-      font-size: 2.7rem;
-      line-height: 1.18;
+    .hero h1 {
+      font-size: 2.6rem;
+      line-height: 1.2;
       color: var(--primary);
       margin-bottom: 20px;
     }
@@ -278,7 +299,7 @@
       font-size: 0.9rem;
     }
 
-    /* SECCIÓN SERVICIOS */
+    /* SECCIONES COMUNES */
     .section {
       padding: 75px 0;
     }
@@ -289,7 +310,7 @@
       margin: 0 auto 50px;
     }
 
-    .section-header h3 {
+    .section-header h2 {
       font-size: 2.2rem;
       color: var(--primary);
       margin-bottom: 10px;
@@ -323,7 +344,7 @@
       margin-bottom: 15px;
     }
 
-    .card h4 {
+    .card h3 {
       font-size: 1.25rem;
       color: var(--primary);
       margin-bottom: 10px;
@@ -352,7 +373,7 @@
       object-fit: cover;
     }
 
-    .about-text h3 {
+    .about-text h2 {
       font-size: 2rem;
       color: var(--primary);
       margin-bottom: 5px;
@@ -381,6 +402,63 @@
       display: flex;
       align-items: flex-start;
       gap: 8px;
+    }
+
+    /* SECCIÓN ZONAS CERCANAS Y DE INFLUENCIA */
+    .seo-local-block {
+      background: var(--surface);
+      border-radius: 24px;
+      padding: 45px;
+      margin-bottom: 50px;
+      border: 1px solid var(--border-color);
+    }
+
+    .seo-local-block h2 {
+      font-size: 1.8rem;
+      color: var(--primary);
+      margin-bottom: 12px;
+    }
+
+    .neighborhoods-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 20px 0;
+    }
+
+    .n-tag {
+      background: #F4EFEB;
+      color: var(--primary);
+      padding: 6px 14px;
+      border-radius: 12px;
+      font-size: 0.88rem;
+      font-weight: 600;
+    }
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+      margin-top: 30px;
+    }
+
+    .faq-item {
+      background: var(--bg-cream);
+      padding: 22px;
+      border-radius: 14px;
+      border-left: 4px solid var(--accent);
+    }
+
+    .faq-item h3 {
+      font-size: 1.05rem;
+      color: var(--primary);
+      margin-bottom: 8px;
+    }
+
+    .faq-item p {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      line-height: 1.5;
     }
 
     /* SECCIÓN SUTIL DEL EBOOK */
@@ -417,7 +495,7 @@
       margin-bottom: 6px;
     }
 
-    .book-details h4 {
+    .book-details h3 {
       font-size: 1.45rem;
       color: var(--primary);
       margin-bottom: 8px;
@@ -562,7 +640,7 @@
       gap: 40px;
     }
 
-    .contact-box h3 {
+    .contact-box h2 {
       font-size: 2rem;
       margin-bottom: 15px;
     }
@@ -642,8 +720,15 @@
       font-size: 0.85rem;
     }
 
-    @media (max-width: 850px) {
-      .hero, .about-wrapper, .contact-box {
+    /* RESPONSIVE CONTROLADO */
+    @media (max-width: 960px) {
+      .brand-logo .brand-subtitle {
+        display: none; /* En pantallas medianas oculta el subtítulo largo para que el menú quede en una línea */
+      }
+    }
+
+    @media (max-width: 820px) {
+      .hero, .about-wrapper, .contact-box, .faq-grid {
         grid-template-columns: 1fr;
       }
       .book-banner {
@@ -658,13 +743,10 @@
         width: 100%;
       }
       .nav-links {
-        display: none;
+        display: none; /* En celulares colapsa limpiamente */
       }
-      .hero h2 {
+      .hero h1 {
         font-size: 2.1rem;
-      }
-      .brand-logo .brand-subtitle {
-        display: none;
       }
     }
   </style>
@@ -675,10 +757,10 @@
 
   <!-- BARRA DE INFORMACIÓN RÁPIDA -->
   <div class="top-bar">
-    📍 Consultorio en 8 de Octubre y Pan de Azúcar, Montevideo | 📲 WhatsApp: <a href="https://wa.me/59894888799" target="_blank">094 888 799</a>
+    📍 Consultorio en La Unión (8 de Octubre y Pan de Azúcar) | 📲 WhatsApp: <a href="https://wa.me/59894888799" target="_blank">094 888 799</a>
   </div>
 
-  <!-- NAVEGACIÓN -->
+  <!-- NAVEGACIÓN PROLIJA EN UNA LÍNEA -->
   <header>
     <div class="container">
       <nav>
@@ -688,11 +770,14 @@
         </a>
         <ul class="nav-links">
           <li><a href="#especialidades">Especialidades</a></li>
-          <li><a href="#lic-natalia">Lic. Natalia Antúnez</a></li>
+          <li><a href="#lic-natalia">Sobre Natalia</a></li>
+          <li><a href="#zonas-cercanas">Zonas de influencia</a></li>
           <li><a href="#publicaciones">Ebook</a></li>
-          <li><a href="#contacto">Ubicación y Contacto</a></li>
+          <li><a href="#contacto">Contacto</a></li>
         </ul>
-        <a href="https://wa.me/59894888799?text=Hola,%20quisiera%20consultar%20por%20atenci%C3%B3n%20psicol%C3%B3gica" target="_blank" class="btn btn-accent">Agendar Consulta</a>
+        <div class="nav-cta">
+          <a href="https://wa.me/59894888799?text=Hola,%20quisiera%20consultar%20por%20atenci%C3%B3n%20psicol%C3%B3gica" target="_blank" class="btn btn-accent">Agendar Consulta</a>
+        </div>
       </nav>
     </div>
   </header>
@@ -700,74 +785,74 @@
   <!-- HERO SECTION -->
   <section class="hero container">
     <div class="hero-content">
-      <span class="hero-tag">Tu bienestar emocional importa</span>
-      <h2>Un espacio de escucha y trabajo terapéutico para vos</h2>
-      <p>Acompañamiento profesional y cercano para abordar aquello que te preocupa, transitar momentos de cambio y reencontrar tu equilibrio personal.</p>
+      <span class="hero-tag">Psicología • Presencial en La Unión y Online</span>
+      <h1>Atención psicológica profesional y cercana en La Unión</h1>
+      <p>Consultorio psicoterapéutico a cargo de la <strong>Lic. Natalia Antúnez Kvedaras</strong> (UDELAR). Un espacio de escucha y herramientas concretas para el tratamiento de la ansiedad, crisis vitales, vínculos y desarrollo personal.</p>
       <div class="hero-buttons">
         <a href="https://wa.me/59894888799?text=Hola,%20me%20gustar%C3%ADa%20coordinar%20una%20primera%20consulta" class="btn btn-accent" target="_blank">Contactar por WhatsApp</a>
         <a href="#lic-natalia" class="btn btn-outline">Conocer a la profesional</a>
       </div>
     </div>
     <div class="hero-img-card">
-      <img src="natalia1.jpg" alt="Lic. Natalia Antúnez Kvedaras - Psicóloga" onerror="this.src='https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=700&q=80'">
+      <img src="natalia1.jpg" alt="Lic. Natalia Antúnez Kvedaras - Psicóloga en La Unión Montevideo" onerror="this.src='https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=700&q=80'">
     </div>
   </section>
 
   <!-- LISTA RÁPIDA DE MOTIVOS DE CONSULTA -->
   <div class="chips-section">
     <div class="container chips-container">
-      <span class="chip">✓ Ansiedad</span>
-      <span class="chip">✓ Autoestima</span>
-      <span class="chip">✓ Angustia y Depresión</span>
-      <span class="chip">✓ Vínculos y Pareja</span>
-      <span class="chip">✓ Duelos</span>
-      <span class="chip">✓ Cambios Vitales</span>
+      <span class="chip">✓ Tratamiento de Ansiedad</span>
+      <span class="chip">✓ Autoestima y Angustia</span>
+      <span class="chip">✓ Terapia de Pareja</span>
+      <span class="chip">✓ Vínculos y Duelos</span>
+      <span class="chip">✓ Psicodiagnóstico</span>
       <span class="chip">✓ Orientación Vocacional</span>
+      <span class="chip">✓ Presencial y Online</span>
     </div>
   </div>
 
   <!-- SERVICIOS / ÁREAS DE ATENCIÓN -->
   <section id="especialidades" class="section container">
     <div class="section-header">
-      <h3>Atención Psicológica y Modalidades</h3>
-      <p>Enfoques terapéuticos pensados a medida para cada etapa de la vida.</p>
+      <h2>Especialidades y Modalidades de Atención</h2>
+      <p>Abordaje psicoterapéutico con calidez, confidencialidad y rigor clínico.</p>
     </div>
 
     <div class="grid-cards">
       <div class="card">
-        <div class="card-icon">🌱</div>
-        <h4>Psicoterapia Individual</h4>
-        <p>Espacio seguro para el tratamiento de crisis vitales, gestión de emociones, autoconocimiento y desarrollo personal.</p>
+        <div class="card-icon">🧠</div>
+        <h3>Tratamiento para la Ansiedad</h3>
+        <p>Acompañamiento en crisis de pánico, estrés persistente, fobias y desregulación emocional. Herramientas prácticas para recuperar la tranquilidad cotidiana.</p>
       </div>
 
       <div class="card">
-        <div class="card-icon">🧠</div>
-        <h4>Ansiedad y Angustia</h4>
-        <p>Abordaje específico para crisis de pánico, estrés persistente, fobias y preocupaciones que afectan tu vida cotidiana.</p>
+        <div class="card-icon">🌱</div>
+        <h3>Psicoterapia Individual</h3>
+        <p>Espacio seguro para transitar duelos, cambios de etapa, dificultades afectivas, angustia y fortalecimiento de la autoestima.</p>
       </div>
 
       <div class="card">
         <div class="card-icon">🤝</div>
-        <h4>Terapia de Pareja y Familiar</h4>
-        <p>Acompañamiento en resolución de conflictos, mejora de la comunicación y fortalecimiento de los vínculos familiares.</p>
+        <h3>Terapia de Pareja y Familia</h3>
+        <p>Acompañamiento en resolución de conflictos, desacuerdos vinculares y mejora de la comunicación familiar.</p>
       </div>
 
       <div class="card">
         <div class="card-icon">📋</div>
-        <h4>Psicodiagnóstico</h4>
-        <p>Evaluación clínica completa para niños, adolescentes y adultos con enfoque riguroso y humano.</p>
+        <h3>Psicodiagnóstico</h3>
+        <p>Evaluaciones clínicas para niños, adolescentes y adultos con enfoque integrador y riguroso.</p>
       </div>
 
       <div class="card">
         <div class="card-icon">🧭</div>
-        <h4>Orientación Vocacional y Laboral</h4>
-        <p>Orientación para la toma de decisiones profesionales, redefinición de proyectos de vida y transición educativa.</p>
+        <h3>Orientación Vocacional</h3>
+        <p>Procesos breves de orientación vocacional y laboral para jóvenes y adultos que buscan redefinir su proyecto de futuro.</p>
       </div>
 
       <div class="card">
-        <div class="card-icon">👥</div>
-        <h4>Talleres y Psicoeducación</h4>
-        <p>Instancias grupales, co-visión de casos clínicos y formación en habilidades socioemocionales.</p>
+        <div class="card-icon">💻</div>
+        <h3>Atención Online y Presencial</h3>
+        <p>Flexibilidad de atención presencial en nuestro consultorio o sesiones por videollamada para todo Uruguay y el exterior.</p>
       </div>
     </div>
   </section>
@@ -775,21 +860,63 @@
   <!-- BIO DE LA LICENCIADA -->
   <section id="lic-natalia" class="section container">
     <div class="about-wrapper">
-      <img src="natalia.jpg" alt="Lic. Natalia Antúnez Kvedaras" onerror="this.src='https://images.unsplash.com/photo-1544717302-de2939b7ef71?auto=format&fit=crop&w=700&q=80'">
+      <img src="natalia.jpg" alt="Lic. Natalia Antúnez Kvedaras - Consultorio EPYE" onerror="this.src='https://images.unsplash.com/photo-1544717302-de2939b7ef71?auto=format&fit=crop&w=700&q=80'">
       <div class="about-text">
-        <h3>Lic. Natalia Antúnez Kvedaras</h3>
-        <span class="credentials-badge">Lic. en Psicología (UDELAR) | Lic. en Pedagogía (MEC)</span>
+        <h2>Lic. Natalia Antúnez Kvedaras</h2>
+        <span class="credentials-badge">Licenciada en Psicología (UDELAR) | Licenciada en Pedagogía (MEC)</span>
         
-        <p>Fundadora de <strong>EPYE</strong>, un espacio de consulta y atención psicológica en constante crecimiento y compromiso con la salud mental.</p>
+        <p>Fundadora de <strong>EPYE</strong>, consultorio dedicado al bienestar emocional y la salud mental en el corazón de La Unión.</p>
         
-        <p><em>"Disfruto de los mates, de las largas conversaciones con la gente que quiero, y de acompañar a cada persona a evolucionar en su propio camino."</em></p>
+        <p><em>"Mi compromiso es brindar un espacio donde te sientas escuchado, sin juicios, trabajando de forma conjunta para construir recursos duraderos frente al malestar."</em></p>
 
         <ul class="formation-list">
           <li>🎓 Posgrado en Terapia Gestalt (ILEP)</li>
           <li>🎓 Diplomado en Psicodiagnóstico de niños y adolescentes (UNO)</li>
           <li>🎓 Formación en Terapia de Pareja y Psicología Clínica</li>
-          <li>🎓 Inclusión educativa, neurodidáctica y tecnologías del aprendizaje</li>
+          <li>🎓 Formación en Neurodidáctica y Orientación Vocacional</li>
         </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOQUE: ZONAS DE INFLUENCIA Y CERCANÍA (CONCEPTO CORREGIDO) -->
+  <section id="zonas-cercanas" class="container">
+    <div class="seo-local-block">
+      <h2>Ubicación y zonas de influencia</h2>
+      <p style="color: var(--text-muted); font-size: 1rem;">
+        Si bien brindamos atención a personas de <strong>cualquier punto de Montevideo y de todo el país</strong> (tanto de manera presencial como online), nuestro consultorio en <strong>Avenida 8 de Octubre y Pan de Azúcar</strong> cuenta con una ubicación privilegiada y de acceso inmediato desde los barrios más cercanos:
+      </p>
+
+      <div class="neighborhoods-tags">
+        <span class="n-tag">📍 La Unión</span>
+        <span class="n-tag">📍 Villa Española</span>
+        <span class="n-tag">📍 Curva de Maroñas</span>
+        <span class="n-tag">📍 La Blanqueada</span>
+        <span class="n-tag">📍 Maroñas</span>
+        <span class="n-tag">📍 Malvín Norte</span>
+        <span class="n-tag">📍 Flor de Maroñas</span>
+      </div>
+
+      <div class="faq-grid">
+        <div class="faq-item">
+          <h3>¿Cómo llegar en transporte público?</h3>
+          <p>Al estar situados sobre la arteria principal de 8 de Octubre, existe conexión directa mediante decenas de líneas de ómnibus desde Villa Española, Curva de Maroñas, La Blanqueada y el Centro (100, 102, 103, 105, 109, 110, 111, 316, 402, entre otras).</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>¿Se puede consultar desde otros barrios o el interior?</h3>
+          <p>Por supuesto. Quienes no puedan trasladarse de forma presencial pueden realizar su proceso terapéutico completo mediante nuestra modalidad de atención psicológica online por videollamada.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>¿Se requiere derivación médica?</h3>
+          <p>No, puedes comunicarte directamente por WhatsApp para coordinar una primera consulta particular y acordar el día y horario que mejor se adapte a tu rutina.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>¿Cómo se coordinan los turnos?</h3>
+          <p>Toda la atención es con cita previamente acordada para garantizar la puntualidad, privacidad y el tiempo adecuado de cada sesión.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -797,21 +924,18 @@
   <!-- SECCIÓN SUTIL DEL EBOOK -->
   <section id="publicaciones" class="container">
     <div class="book-banner">
-      <!-- Si colocas libro.jpg en la carpeta se verá aquí -->
       <img src="libro.jpg" alt="Ebook Lic. Natalia Antúnez" class="book-cover" onerror="this.src='https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=300&q=80'">
       
       <div class="book-details">
         <span class="book-tag">📖 Ebook Digital • Por Lic. Natalia Antúnez</span>
-        <h4>¿Cómo hacer match entre tu desarrollo personal y profesional?</h4>
+        <h3>¿Cómo hacer match entre tu desarrollo personal y profesional?</h3>
         <p>Descubrí cómo alinear tu vocación con tu crecimiento personal. Identifica tus talentos y toma decisiones seguras sobre tu futuro para construir un camino que te llene y te haga feliz.</p>
       </div>
 
       <div class="book-actions">
-        <!-- Abre el popup informativo nativo -->
         <button type="button" class="btn btn-outline" onclick="openBookModal()">
           Ver detalles
         </button>
-        <!-- Enlace directo y seguro a la página de pago de Hotmart -->
         <a href="https://pay.hotmart.com/H102853427W?checkoutMode=2" target="_blank" rel="noopener noreferrer" class="btn btn-accent" style="justify-content: center;">
           Adquirir Ebook
         </a>
@@ -819,7 +943,7 @@
     </div>
   </section>
 
-  <!-- POPUP MODAL NATIVO (100% FUNCIONAL Y AUTÓNOMO) -->
+  <!-- POPUP MODAL NATIVO -->
   <div id="bookModal" class="modal-backdrop" onclick="closeBookModalOnBg(event)">
     <div class="modal-card">
       <button type="button" class="modal-close-btn" onclick="closeBookModal()" title="Cerrar">✕</button>
@@ -853,15 +977,15 @@
   <section id="contacto" class="section container">
     <div class="contact-box">
       <div>
-        <h3>Consultorio y Contacto</h3>
-        <p>Coordina tu primer encuentro presencial u online escribiéndonos directamente por WhatsApp o correo electrónico.</p>
+        <h2>Consultorio y Contacto</h2>
+        <p>Coordina tu primer encuentro presencial en La Unión o solicita sesión online escribiéndonos por WhatsApp.</p>
         
         <div class="contact-item">
           <div style="font-size: 1.3rem;">📍</div>
           <div>
             <strong>Dirección:</strong><br>
             Avenida 8 de Octubre y Pan de Azúcar.<br>
-            Montevideo, Uruguay.<br>
+            Barrio La Unión, Montevideo, Uruguay.<br>
             <a href="https://maps.app.goo.gl/WWuK4uQhxDuugxF89" target="_blank" rel="noopener noreferrer" class="maps-link-btn">
               🗺️ Ver ubicación en Google Maps
             </a>
@@ -894,7 +1018,7 @@
       </div>
 
       <div style="display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; background: rgba(255,255,255,0.06); padding: 30px; border-radius: 16px;">
-        <h4 style="font-size: 1.4rem; margin-bottom: 15px;">¿Querés coordinar una consulta?</h4>
+        <h3 style="font-size: 1.4rem; margin-bottom: 15px; color: #FFF;">¿Querés coordinar una consulta?</h3>
         <p style="font-size: 0.95rem; margin-bottom: 25px;">Escribinos sin compromiso para consultar disponibilidad horaria y aranceles.</p>
         <a href="https://wa.me/59894888799?text=Hola%20Lic.%20Natalia,%20quisiera%20consultar%20por%20un%20turno" class="btn btn-accent" target="_blank" style="width: 100%; justify-content: center;">
           Escribir al 094 888 799
@@ -912,11 +1036,11 @@
 
   <footer>
     <div class="container">
-      <p>© 2026 EPYE - Espacio Psicológico y Educativo | Lic. Natalia Antúnez Kvedaras | Montevideo, Uruguay</p>
+      <p>© 2026 EPYE - Espacio Psicológico y Educativo | Lic. Natalia Antúnez Kvedaras | La Unión, Montevideo, Uruguay</p>
     </div>
   </footer>
 
-  <!-- SCRIPT PARA CONTROLAR EL POPUP LOCALMENTE Y EN LA WEB -->
+  <!-- SCRIPT DEL POPUP -->
   <script>
     function openBookModal() {
       var modal = document.getElementById('bookModal');
